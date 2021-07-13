@@ -39,6 +39,41 @@ if (cn.WORKTYPE == 'private') {
         });
 
     }));
+Asena.addCommand({ pattern: 'twt ?(.*)', fromMe: false, desc: "download from twitter links" }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage("Give proper link!"))
+
+    await message.sendMessage(infoMessage(Lang.LOADINGTV))
+
+    await axios
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/twdown?url=${userName}`)
+      .then(async (response) => {
+        const {
+          format,
+          result,
+        } = response.data
+
+        const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
+
+        const msg = `${format}`
+
+
+      if (msg === 'Image/jpg or png') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: msg,
+        })}
+		 	 
+	if (msg === 'video/mp4') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: msg,
+        })}
+
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage("Error" )),
+      )
+  },
+)
 
     /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
