@@ -77,7 +77,7 @@ else if (Config.WORKTYPE == 'public') {
         '*💸' + CURRENCY +':* ```' + ipjson.currency+ '```\n\n' +
         '*📡' + ISP +':* ```' + ipjson.isp+ '```\n' +
         '*🛡' + PROXY +':* ```' + ipjson.proxy+ '```\n' +
-        '*📱' + MOBILE +':* ```' + ipjson.mobile+ '```\n', MessageType.text);
+        '*📱' + MOBILE +':* ```' + ipjson.mobile+ '```\n', MessageType.text, {quoted: message.data});
 	} 
     catch {
 		return await message.client.sendMessage(message.jid, NOT_FOUNDIP, MessageType.text , {quoted: message.data});
