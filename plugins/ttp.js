@@ -10,6 +10,7 @@ const axios = require('axios');
 const Config = require('../config');
 
 const Language = require('../language');
+const Lang = Language.getString('sticker');
 const Lang = Language.getString('ttp');
 
 
