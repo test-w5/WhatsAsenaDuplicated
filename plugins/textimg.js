@@ -1047,4 +1047,22 @@ else if (Config.WORKTYPE == 'public') {
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT'})
 
     }));
+    Asena.addCommand({pattern: 'rbts ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+    var webimage = await axios.get(`https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT'})
+
+    }));
+    Asena.addCommand({pattern: 'rblackpink ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+    var webimage = await axios.get(`https://api.xteam.xyz/randomimage/blackpink?APIKEY=63c57b77f6b660c1=${match[1]}`, { responseType: 'arraybuffer' })
+
+    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT'})
+
+    }));
 }
