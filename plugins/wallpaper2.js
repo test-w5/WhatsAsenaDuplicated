@@ -2,7 +2,7 @@
 Telegram: t.me/WH173-5P1D3R
 Instagram: https://instagram.com/wh173_5p1d3r_official
 Special Thanks:
-@Phaticusthiccy for Unlimitted Helps
+@Phaticusthiccy for Unlimitted Helps.
 */
 
 const Asena = require('../events');
