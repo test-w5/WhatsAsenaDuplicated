@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
     r_text[24] = "https://c4.wallpaperflare.com/wallpaper/273/834/492/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[25] = "https://c4.wallpaperflare.com/wallpaper/805/525/208/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[26] = "https://c4.wallpaperflare.com/wallpaper/619/90/342/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
-    r_text[27] = "https://c4.wallpaperflare.com/wallpaper/951/300/843/bangtan-boy-boys-bts-wallpaper-thumb.jpg
+    r_text[27] = "https://c4.wallpaperflare.com/wallpaper/951/300/843/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[28] = "https://c4.wallpaperflare.com/wallpaper/648/961/96/music-bts-suga-singer-wallpaper-thumb.jpg";
     r_text[29] = "https://c4.wallpaperflare.com/wallpaper/179/295/758/suga-agust-d-bts-hd-wallpaper-thumb.jpg";
     r_text[30] = "https://c4.wallpaperflare.com/wallpaper/610/350/327/bts-jungkook-jin-bts-jhope-wallpaper-thumb.jpg";
@@ -136,7 +136,7 @@ else if (Config.WORKTYPE == 'public') {
     r_text[24] = "https://c4.wallpaperflare.com/wallpaper/273/834/492/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[25] = "https://c4.wallpaperflare.com/wallpaper/805/525/208/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[26] = "https://c4.wallpaperflare.com/wallpaper/619/90/342/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
-    r_text[27] = "https://c4.wallpaperflare.com/wallpaper/951/300/843/bangtan-boy-boys-bts-wallpaper-thumb.jpg
+    r_text[27] = "https://c4.wallpaperflare.com/wallpaper/951/300/843/bangtan-boy-boys-bts-wallpaper-thumb.jpg";
     r_text[28] = "https://c4.wallpaperflare.com/wallpaper/648/961/96/music-bts-suga-singer-wallpaper-thumb.jpg";
     r_text[29] = "https://c4.wallpaperflare.com/wallpaper/179/295/758/suga-agust-d-bts-hd-wallpaper-thumb.jpg";
     r_text[30] = "https://c4.wallpaperflare.com/wallpaper/610/350/327/bts-jungkook-jin-bts-jhope-wallpaper-thumb.jpg";
