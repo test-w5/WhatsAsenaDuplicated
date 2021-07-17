@@ -649,7 +649,7 @@ else if (config.WORKTYPE == 'public') {
             mesaj += '*' + video.title + '* - ' + video.url + '\n'
         });
 
-        await message.client.sendMessage(message.jid,mesaj,MessageType.text);
+        await message.client.sendMessage(message.jid,mesaj,MessageType.text, {quoted: message.data});
         await reply.delete();
     }));
 
@@ -662,7 +662,7 @@ else if (config.WORKTYPE == 'public') {
             .page(match[1]);
 
         var info = await arama.rawContent();
-        await message.client.sendMessage(message.jid, info, MessageType.text);
+        await message.client.sendMessage(message.jid, info, MessageType.text, {quoted: message.data});
         await reply.delete();
     }));
 
@@ -674,7 +674,7 @@ else if (config.WORKTYPE == 'public') {
             var stream = get.buffer();
                 
             stream.then(async (image) => {
-                await message.client.sendMessage(message.jid,image, MessageType.image);
+                await message.client.sendMessage(message.jid,image, MessageType.image, {quoted: message.data});
             });
         }
 
@@ -738,7 +738,7 @@ else if (config.WORKTYPE == 'public') {
 
         var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {quoted: message.data, caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
 
     }));
 
