@@ -20,7 +20,7 @@ if (cn.WORKTYPE == 'private') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=63c57b77f6b660c1`
+        let urls = `https://videfikri.com/api/igtv/?url=${match[1]}`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -34,7 +34,7 @@ if (cn.WORKTYPE == 'private') {
         let url = json.result.data[0].data;
         let name = json.result.data[0].type;
         await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
+            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.FULLNAME + '* ' + json.result.full_name + '\n*' + Tlang.CAPTION + '* ' + json.result.caption + '\n*' + Tlang.COMMENT + '* ' + json.result.comment + '\n*' + Tlang.DURATION + '* ' + json.result.duration + '\n*' + Tlang.URL + '* ' + json.result.thumb }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.FULLNAME + '* ' + json.result.fullname + '\n*' + Tlang.HEIGHT&WIDTH + '* ' + json.result.height_width + '\n*' + Tlang.CAPTION + '* ' + json.result.caption + '\n*' + Tlang.COMMENT + '* ' + json.result.comment + '\n*' + Tlang.LIKES + '* ' + json.result.likes + '\n*' + Tlang.IMAGEPREDICTION + '* ' + json.result.image_text });
             }
         });
 
