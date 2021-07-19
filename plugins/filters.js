@@ -72,3 +72,27 @@ if(pattern.test(message.message)){
         }
     );
 }));
+Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+        if (!!message.mention && message.mention[0] == '917736807522@s.whatsapp.net') {
+await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
+    }
+const array = ['Abdu','Demigod','Bot']
+array.map( async (a) => {
+let pattern = new RegExp(`\\b${a}\\b`, 'g');
+if(pattern.test(message.message)){
+   await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted: message.data, ptt: false})
+}
+});
+}
+
+var filtreler = await FilterDb.getFilter(message.jid);
+if (!filtreler) return; 
+filtreler.map(
+    async (filter) => {
+        pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
+        if (pattern.test(message.message)) {
+            await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data});
+        }
+    }
+);
+}));
