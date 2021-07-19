@@ -29,6 +29,8 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
+}
+
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'semoji ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
