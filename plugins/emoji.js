@@ -18,7 +18,7 @@ const iii = "Only work with emoji"
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'stickemoji ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
+    Asena.addCommand({pattern: 'imgemoji ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'stickemoji ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
+    Asena.addCommand({pattern: 'imgemoji ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -42,7 +42,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'stickemoji ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'imgemoji ?(.*)', fromMe: true,dontAddCMDList: true}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
