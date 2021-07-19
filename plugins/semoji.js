@@ -22,7 +22,7 @@ if (Config.WORKTYPE == 'private') {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
-        var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=w6pOcZAlefcsPoNoFV8CzWpo9yT&emoji=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker ,{quoted: message.data}
               );
@@ -35,7 +35,7 @@ else if (Config.WORKTYPE == 'public') {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
-        var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=w6pOcZAlefcsPoNoFV8CzWpo9yT&emoji=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker ,{quoted: message.data}
               );
@@ -46,12 +46,10 @@ else if (Config.WORKTYPE == 'public') {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
-        var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=w6pOcZAlefcsPoNoFV8CzWpo9yT&emoji=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
         await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker ,{quoted: message.data}
               );
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-}
-
 }
