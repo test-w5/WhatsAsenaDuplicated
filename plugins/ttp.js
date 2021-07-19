@@ -52,10 +52,5 @@ else if (Config.WORKTYPE == 'public') {
         var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/glowingneon/?text=' + uri, { responseType: 'arraybuffer' })
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT' })
     }));
-    Asena.addCommand({ pattern: 'semoji ?(.*)', fromMe: false, desc: Lang.EMOJI_DESC }, (async (message, match) => {
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_EMOJI, MessageType.text);
-        var uri = encodeURI(match[1])
-        var ttinullimage = await axios.get('https://api.zeks.xyz/api/emoji-image?apikey=w6pOcZAlefcsPoNoFV8CzWpo9yT&emoji=' + uri, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
-    }));
+   
 }
