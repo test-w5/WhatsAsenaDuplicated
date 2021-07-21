@@ -45,3 +45,15 @@ Asena.addCommand({pattern: 'playstore ?(.*)', fromMe: false, desc: Lang.HMODD_DE
 		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text , {quoted: message.data});
 	}
 });
+Asena.addCommand({pattern: 'ffid ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
+	const url = `https://lolhuman.herokuapp.com/api/freefire/${match[1]}?apikey=98e16488375eceae95f96704`;
+	try {
+		const response = await got(url);
+		const json = JSON.parse(response.body);
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid,
+		'*🔰 ' + Lang.RESULT +':* ```' + json.result[0].result + '```\n', MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDMD, MessageType.text , {quoted: message.data});
+	}
+});
