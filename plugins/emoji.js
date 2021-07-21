@@ -12,13 +12,13 @@ const got = require("got");
 
 const Config = require('../config');
 
-const des = "You Can Png From Any Emoji"
+const des = "Emoji to Emoji Png Picture"
 
 const iii = "Only work with emoji"
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'imgemoji ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
+    Asena.addCommand({pattern: 'pemoji ?(.*)', fromMe: true, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'imgemoji ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
+    Asena.addCommand({pattern: 'pemoji ?(.*)', fromMe: false, desc: des}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(iii);
 
