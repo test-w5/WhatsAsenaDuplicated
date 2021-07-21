@@ -20,7 +20,7 @@ if (Config.WORKTYPE == 'private') {
     var r_text = new Array ();
 
     r_text[0] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1";
-    r_text[1] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1";
+    r_text[1] = "https://lolhuman.herokuapp.com/api/random/bts?apikey=98e16488375eceae95f96704";
     r_text[2] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1";  
       
     var i = Math.floor(3*Math.random())   
