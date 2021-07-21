@@ -52,5 +52,11 @@ else if (Config.WORKTYPE == 'public') {
         var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/glowingneon/?text=' + uri, { responseType: 'arraybuffer' })
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT' })
     }));
+    Asena.addCommand({ pattern: '2attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+        var uri = encodeURI(match[1])
+        var ttinullimage = await axios.get('https://lolhuman.herokuapp.com/api/attp2?apikey=98e16488375eceae95f96704&text=' + uri, { responseType: 'arraybuffer' })
+        await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp, quoted: message.data })
+    }));
    
 }
