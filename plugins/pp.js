@@ -33,6 +33,6 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'alive', fromMe: false}, (async (message, match) => {
-await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/Logo.webp'), MessageType.image, { mimetype: Mimetype.png, quoted : message.data, caption: '*Still Alive*'})
+await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/W5-BOT.jpg'), MessageType.image, { mimetype: Mimetype.png, quoted : message.data, caption: '*Still Alive*'})
     }
 }  
