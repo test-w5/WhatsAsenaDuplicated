@@ -15,7 +15,7 @@ const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'pp', fromMe: true, desc: Lang.AN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'pic', fromMe: true, desc: Lang.AN}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'pp', fromMe: false}, (async (message, match) => {
+    Asena.addCommand({pattern: 'pic', fromMe: false}, (async (message, match) => {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/W5-BOT.jpg'), MessageType.image, { mimetype: Mimetype.png, quoted : message.data, caption: '*Still Alive*'})
     }));
 }  
