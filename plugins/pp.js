@@ -32,18 +32,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.AN}, (async (message, match) => {
-
-    var r_text = new Array ();
-
-    r_text[0] = "https://i.ibb.co/GVh2zp1/W5-BOT.webp";
-    r_text[1] = "https://i.ibb.co/GVh2zp1/W5-BOT.webp";
-    
-    var i = Math.floor(2*Math.random())
-
-    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '*Bot Name:* 🐱W5-BOT🤖\n\n\n\n*Version:* v2.0\n\n\n\n*Status:* Alive😊'})
-
-    }));
+    Asena.addCommand({pattern: 'alive', fromMe: false}, (async (message, match) => {
+await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/Logo.webp'), MessageType.image, { mimetype: Mimetype.png, quoted : message.data, caption: '*Still Alive*'})
+    }
 }  
