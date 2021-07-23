@@ -31,7 +31,7 @@ if (Config.WORKTYPE == 'private') {
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             if (!payload.includes('{pp}')) {
-                await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow, MessageType.text, quoted: message.data);
+                await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow, MessageType.text);
             }
             else if (payload.includes('{pp}')) {
                 await message.sendMessage(Buffer(resim.data), MessageType.image, { quoted: message.data, caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL) + '\n' + pow });
