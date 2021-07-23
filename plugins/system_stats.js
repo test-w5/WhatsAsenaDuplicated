@@ -21,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```*🐱W5-BOT🤖*```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Status:* Alive, MessageType.text);
+            await message.client.sendMessage(message.jid,'```🐱W5-BOT🤖```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Status:* ' + Config.CHANNEL , MessageType.text);
         }
         else {
             const pow = '*🐱W5-BOT🤖*'
@@ -52,7 +52,7 @@ else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```*🐱W5-BOT🤖*```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Status:* Alive, MessageType.text);
+            await message.client.sendMessage(message.jid,'```🐱W5-BOT🤖```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Status:* ' + Config.CHANNEL, MessageType.text);
         }
         else {
             const pow = '*🐱W5-BOT🤖*'
