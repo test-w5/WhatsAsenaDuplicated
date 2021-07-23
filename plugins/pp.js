@@ -26,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
     
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '*Bot Name:* 🐱W5-BOT🤖             *Version:* v2.0'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '*Bot Name:* 🐱W5-BOT🤖\n\n\n\n*Version:* v2.0\n\n\n\n*Status:* Alive😊'})
 
     }));
 }
@@ -43,7 +43,7 @@ else if (Config.WORKTYPE == 'public') {
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '*Bot Name:* 🐱W5-BOT🤖             *Version:* v2.0'})
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '*Bot Name:* 🐱W5-BOT🤖\n\n\n\n*Version:* v2.0\n\n\n\n*Status:* Alive😊'})
 
     }));
 }  
