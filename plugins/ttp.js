@@ -327,3 +327,4 @@ Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }
     })
   }
 }));
+}
