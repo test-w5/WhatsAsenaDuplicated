@@ -28,7 +28,7 @@
     "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
     "textmaker-thiccy": "^1.2.5",
-    "whatsasena-npm": "^1.1.3",
+    "whatsasena-npm": "^1.3.0",
     "browser-id3-writer": "^4.4.0",
     "playstore-scraper": "^1.0.1",
     "axios": "^0.21.1",
