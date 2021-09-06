@@ -6,14 +6,13 @@ This code works with unlimited and completely free an API scraper.
 Don't use it for illegal purposes.
 */
 
-const thiccysapi = require('textmaker-thiccy'); // Import NPM Package.
-
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
+const WhatsAsenaStack = require('whatsasena-npm');
 const os = require('os');
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
