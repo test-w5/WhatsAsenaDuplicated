@@ -8,6 +8,11 @@ const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys'
 const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
+const ffmpeg = require('fluent-ffmpeg');
+const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
+const WhatsAsenaStack = require('whatsasena-npm')
+const request = require('request');
 
 const Language = require('../language');
 const Lang = Language.getString('ttp');
