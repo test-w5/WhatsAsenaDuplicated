@@ -37,11 +37,12 @@ else if (Config.WORKTYPE == 'public') {
 
     var r_text = new Array ();
 
-    r_text[0] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1";
+    r_text[0] = "https://api.xteam.xyz/randomimage/bts?APIKEY=a860f95201407582";
     r_text[1] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1";
-    r_text[2] = "https://api.xteam.xyz/randomimage/bts?APIKEY=63c57b77f6b660c1"; 
+    r_text[2] = "https://api.xteam.xyz/randomimage/bts?APIKEY=504e039badc9ba21";
+    r_text[3] = "https://lolhuman.herokuapp.com/api/random/bts?apikey=98e16488375eceae95f96704";    
     
-    var i = Math.floor(3*Math.random())
+    var i = Math.floor(4*Math.random())
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
