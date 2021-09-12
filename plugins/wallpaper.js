@@ -1280,7 +1280,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid, Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'W5-BOT'})
+        await message.client.sendMessage(message.jid, Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '_*🐱W5-BOT🤖*_'})
 
     }));
     Asena.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP, dontAddCommandList: true}, (async (message, match) => {
@@ -2117,4 +2117,20 @@ else if (Config.WORKTYPE == 'public') {
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '_*🐱W5-BOT🤖*_'})
 
     }));
+    Asena.addCommand({pattern: 'testwp', fromMe: false, desc: Lang.WP}, (async (message, match) => {
+
+    var r_text = new Array ();
+
+    r_text[0] = "https://i.pinimg.com/564x/bd/66/47/bd664708cfc1f089a2ab9544252f2793.jpg";
+    r_text[1] = "https://i.pinimg.com/564x/34/0f/1f/340f1f53931092d3a5ba6aba21e9743f.jpg";
+    r_text[2] = "https://i.pinimg.com/564x/7e/a9/ab/7ea9ab41cdbb06d08f3193aa96c32828.jpg";
+    r_text[3] = "https://i.pinimg.com/564x/fe/01/8e/fe018eebc8c094e57b7f344f858b3c42.jpg";
+        
+    var i = Math.floor(4*Math.random())   
+
+    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, quoted: message.data, caption: '_*🐱W5-BOT🤖*_'})
+
+    }));    
 }
