@@ -2108,9 +2108,10 @@ else if (Config.WORKTYPE == 'public') {
     r_text[71] = "https://i.pinimg.com/564x/82/93/f2/8293f289563f841ffbc97d19e7bffb86.jpg";
     r_text[72] = "https://i.pinimg.com/564x/6c/b3/d0/6cb3d040dea25a834f43c4d071c7e3b4.jpg";
     r_text[73] = "https://i.pinimg.com/564x/7f/8c/3f/7f8c3f1a9a24ed8a3064a291461c6143.jpg";
-    r_text[74] = "https://i.pinimg.com/564x/21/59/18/2159187460bbf12706f7d59b83166e54.jpg"; 
-      
-    var i = Math.floor(75*Math.random())   
+    r_text[74] = "https://i.pinimg.com/564x/21/59/18/2159187460bbf12706f7d59b83166e54.jpg";
+    r_text[75] = "https://i.pinimg.com/564x/38/02/b7/3802b76cdc40c07e96ff8b525be0d7ae.jpg";    
+                       
+    var i = Math.floor(76*Math.random())   
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
