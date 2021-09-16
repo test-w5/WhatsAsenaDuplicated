@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: false, desc: Lang.TAGALL_DESC
                     jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
                 }
             );
-            await message.client.sendMessage(message.jid,`${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+            await message.client.sendMessage(message.jid,`${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0, quoted: message.data})
         }
         else if (match[1] == '') {
             grup = await message.client.groupMetadata(message.jid);
@@ -61,7 +61,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: false, desc: Lang.TAGALL_DESC
             }
         );
         var tx = message.reply_message.text
-        await message.client.sendMessage(message.jid,tx, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,tx, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0, quoted: message.data})
     }
 }));
 var stag_dsc = ''
