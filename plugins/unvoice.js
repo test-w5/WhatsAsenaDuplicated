@@ -56,7 +56,7 @@ else if (Config.WORKTYPE == 'public') {
             .format('mp3')
             .save('output.mp3')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
