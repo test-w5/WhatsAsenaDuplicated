@@ -47,7 +47,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: false, desc: Lang.TAGALL_DESC
                     jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
                 }
             );
-            await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+            await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0, quoted: message.data})
         }
     }
     else if (message.reply_message) {
