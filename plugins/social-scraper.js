@@ -7,6 +7,13 @@ const Asena = require('../events')
 const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
 const cn = require('../config');
+const request = require('request')
+const fs = require('fs')
+const Axios = require('axios')
+const ffmpeg = require('fluent-ffmpeg')
+// const request = require('request')
+const translatte = require('translatte');
+const exec = require('child_process').exec;
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
