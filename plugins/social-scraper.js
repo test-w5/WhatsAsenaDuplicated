@@ -13,6 +13,7 @@ const Axios = require('axios')
 const ffmpeg = require('fluent-ffmpeg')
 // const request = require('request')
 const translatte = require('translatte');
+const Heroku = require('heroku-client');
 const exec = require('child_process').exec;
 
 const Language = require('../language')
