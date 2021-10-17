@@ -231,7 +231,7 @@
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Restarting Automatically!*",
+            "AFTER_UPDATE": "*💬 W5-BOT Restarting Automatically!*",
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
@@ -438,7 +438,7 @@
             "SAVE_USAGE": "Reply a message and type .save or just use .save <Your note> without replying",
             "REPLY": "Please provide a note or reply to a message.",
             "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
-            "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
+            "UNSUCCESSFUL": "Could not add note, please try again later or contact W5-BOT developers.",
             "DELETE_USAGE": "Deletes *all* your saved notes.",
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
         },
