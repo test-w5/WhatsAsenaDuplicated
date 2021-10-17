@@ -1,7 +1,5 @@
 /* Codded by Phaticusthiccy
-Unlimited API for Photooxy, Textpro and Instagram scraper.
-Material: https://www.npmjs.com/package/textmaker-thiccy
-Github: https://github.com/phaticusthiccy/TextMaker-Unlimited
+Unlimited API for Photooxy, Textpro and Instagram scraper
 This code works with unlimited and completely free an API scraper.
 Don't use it for illegal purposes.
 */
