@@ -7,9 +7,8 @@ let got = require("got");
 let Config = require('../config');
 let Language = require('../language');
 let Lang = Language.getString('unvoice');
-let Asena = Config.WORKTYPE == 'public' ? false : true
 
-   Asena.addCommand({pattern: 'pdf ?(.*)', fromMe: toxicdevil, desc: 'Converts site to PDF.' }, (async (message, match) => {
+   Asena.addCommand({pattern: 'pdf ?(.*)', fromMe: false, desc: 'Converts site to PDF.' }, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, '*You must send a link!*', MessageType.text);
 
