@@ -60,6 +60,16 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t27 = ''
     var t28 = ''
     var t29 = ''
+    var t30 = ''
+    var t31 = ''
+    var t32 = ''
+    var t33 = ''
+    var t34 = ''
+    var t35 = ''
+    var t36 = ''
+    var t37 = ''
+    var t38 = ''
+    var t39 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -68,7 +78,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t5 = 'Yıldırım Temalı Logo Yapar.' // https://textpro.me/thunder-text-effect-online-881.html
         t6 = 'Joker Temalı Logo Yapar.' // https://textpro.me/create-logo-joker-online-934.html
         t7 = 'Ninja Temalı Logo Yapar.' // https://textpro.me/create-ninja-logo-online-935.html
-        t8 = 'Parıltı Temalı Logo Yapar.' // https://textpro.me/advanced-glow-text-effect-873.html
+        t8 = 'Create a sketch text effect online.' // https://textpro.me/advanced-glow-text-effect-873.html
         t9 = 'Bokeh Efekti İçeren Logo Yapar.' // https://textpro.me/bokeh-text-effect-876.html
         t10 = 'Kurt İkonu İçeren Logo Yapar.' // https://textpro.me/create-wolf-logo-galaxy-online-936.html
         t11 = 'Siyah Beyaz Marvel Logosu Yapar.' // https://textpro.me/create-logo-style-marvel-studios-online-971.html
@@ -83,12 +93,22 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t20 = 'Uzay Temalı Logo Yapar.' // https://textpro.me/create-space-3d-text-effect-online-985.html
         t21 = 'Duman Efekti İçeren Logo Yapar.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
         t22 = 'Naruto Temalı Logo Yapar.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
-        t23 = 'Glow Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html
+        t23 = 'Create a spooky Halloween text effect online.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html
         t25 = 'Alev Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
         t26 = 'Harry Potter Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
         t27 = '4. Bir Neon Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
         t28 = 'Mezarlık Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
         t29 = 'Kupa Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t30 = 'Create 3D neon light text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t31 = 'Create a cinematic horror text effect.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t32 = 'Create blue circuit style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t33 = 'Create space text effects online free.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t34 = 'Video game classic 8-bit text effect.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t35 = 'Create science fiction text effect online free.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t36 = 'Create a transformer text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t37 = 'Create green horror style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t38 = 'Online thunder text effect generator.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t39 = 'Create a magma hot text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -98,7 +118,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t5 = 'Makes Lightning Themed Logo.' // https://textpro.me/thunder-text-effect-online-881.html
         t6 = 'Makes Joker Themed Logo.' // https://textpro.me/create-logo-joker-online-934.html
         t7 = 'Makes Ninja Themed Logos.' // https://textpro.me/create-ninja-logo-online-935.html
-        t8 = 'Makes Glitter Themed Logo.' // https://textpro.me/advanced-glow-text-effect-873.html
+        t8 = 'Create a sketch text effect online.' // https://textpro.me/advanced-glow-text-effect-873.html
         t9 = 'Makes Logo With Bokeh Effect.' // https://textpro.me/bokeh-text-effect-876.html
         t10 = 'Makes Logo With Wolf Icon.' // https://textpro.me/create-wolf-logo-galaxy-online-936.html
         t11 = 'Makes Black And White Marvel Logo.' // https://textpro.me/create-logo-style-marvel-studios-online-971.html
@@ -113,12 +133,22 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t20 = 'Makes Space Themed Logo.' // https://textpro.me/create-space-3d-text-effect-online-985.html
         t21 = 'Makes Logo With Smoke Effect.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
         t22 = 'Makes a Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
-        t23 = 'Makes a Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
+        t23 = 'Create a spooky Halloween text effect online.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html        
         t25 = 'Makes Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
         t26 = 'Makes a Harry Potter Themed Logo.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
         t27 = 'Makes a Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
         t28 = 'Makes a Cemetery Themed Logo.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
         t29 = 'Makes a Cup Themed Logo.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t30 = 'Create 3D neon light text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t31 = 'Create a cinematic horror text effect.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t32 = 'Create blue circuit style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t33 = 'Create space text effects online free.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t34 = 'Video game classic 8-bit text effect.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t35 = 'Create science fiction text effect online free.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t36 = 'Create a transformer text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t37 = 'Create green horror style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t38 = 'Online thunder text effect generator.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t39 = 'Create a magma hot text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -750,6 +780,261 @@ Asena.addCommand({pattern: 'textcup ?(.*)', fromMe: wk, dontAddCommandList: true
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/cup.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text5neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t5n.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'texthorror ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    w5botapi.textpro("https://textpro.me/create-a-cinematic-horror-text-effect-1045.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/horror.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textspooky ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    w5botapi.textpro("https://textpro.me/create-a-spooky-halloween-text-effect-online-1046.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/spooky.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textpencil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/pencil.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textcircuit ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-blue-circuit-style-text-effect-online-1043.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/circuit.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textdiscovery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-space-text-effects-online-free-1042.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/discovery.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textfiction ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-science-fiction-text-effect-online-free-1038.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/fiction.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textdemon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/demon.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'texttransformer ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/transformer.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textthunder ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/thunder.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textmagma ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/magma.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textgameover ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    w5botapi.textpro("https://textpro.me/video-game-classic-8-bit-text-effect-1037.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/gameover.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
               })
           } catch(err) { 
               console.log(err)
