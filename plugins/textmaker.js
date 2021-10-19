@@ -172,7 +172,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textlight``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '.textlight Demigod_\n\n' +
         command_cmd + '```.textjoker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '.textjoker Demigod_\n\n' +
         command_cmd + '```.textninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '.textninja Demigod;Ak_\n\n' +
-        command_cmd + '```.textglitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '.textglitter Demigod_\n\n' +
+        command_cmd + '```.textpencil``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '.textpencil Demigod_\n\n' +
         command_cmd + '```.textbokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '.textbokeh Demigod_\n\n' +
         command_cmd + '```.textmarvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '.textmarvel Demigod;Ak_\n\n' +
         command_cmd + '```.text2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '.text2marvel Demigod;Ak_\n\n' +
@@ -183,11 +183,21 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.textice Demigod_\n\n' +
         command_cmd + '```.textspace``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.textspace Demigod;Ak_\n\n' +
         command_cmd + '```.textsmoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '.textsmoke Demigod_\n\n' + // Thanks for @Unique_hunter for base.
-        command_cmd + '```.textglow``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.textglow Demigod_\n\n' +
+        command_cmd + '```.textspooky``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.textspooky Demigod;Ak_\n\n' +
         command_cmd + '```.textfire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '.textfire Demigod_\n\n' +
         command_cmd + '```.textharry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '.textharry Demigod_\n\n' +
         command_cmd + '```.textcup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '.textcup Demigod_\n\n' +
         command_cmd + '```.textcemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '.textcemetery Demigod_\n\n' +
+        command_cmd + '```.text5neon``` \n' + desc_cmd + t30 + '_\n' + usage_cmd + '.text5neon Demigod_\n\n' +
+        command_cmd + '```.texthorror``` \n' + desc_cmd + t31 + '_\n' + usage_cmd + '.texthorror Demigod;Ak_\n\n' +
+        command_cmd + '```.textcircuit``` \n' + desc_cmd + t32 + '_\n' + usage_cmd + '.textcircuit Demigod_\n\n' + 
+        command_cmd + '```.textdiscovery``` \n' + desc_cmd + t33 + '_\n' + usage_cmd + '.textdiscovery Demigod_\n\n' +
+        command_cmd + '```.textgameover``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '.textgameover Demigod;Ak_\n\n' +
+        command_cmd + '```.textfiction``` \n' + desc_cmd + t35 + '_\n' + usage_cmd + '.textfiction Demigod_\n\n' +
+        command_cmd + '```.texttransformer``` \n' + desc_cmd + t36 + '_\n' + usage_cmd + '.texttransformer Demigod_\n\n' +
+        command_cmd + '```.textdemon``` \n' + desc_cmd + t37 + '_\n' + usage_cmd + '.textdemon Demigod_\n\n' +
+        command_cmd + '```.textthunder``` \n' + desc_cmd + t38 + '_\n' + usage_cmd + '.textthunder Demigod_\n\n' +
+        command_cmd + '```.textmagma``` \n' + desc_cmd + t39 + '_\n' + usage_cmd + '.textmagma Demigod_\n\n' +  
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Demigod;Ak_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
