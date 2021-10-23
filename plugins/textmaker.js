@@ -4,7 +4,7 @@ This code works with unlimited and completely free an API scraper.
 Don't use it for illegal purposes.
 */
 
-const w5botapi = require('w5textmaker'); // Import NPM Package
+const w5botapi = require('w5bot-textmaker'); // Import NPM Package
 
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
