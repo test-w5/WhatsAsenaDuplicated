@@ -62,6 +62,28 @@ await message.client.sendMessage(message.jid, {displayname: "WH173 5P1D3R", vcar
  
   }));
     
+    Asena.addCommand({pattern: 'coowner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+   const w5 = 'BEGIN:VCARD\n'
+            + 'VERSION:3.0\n' 
+            + 'FN:AK\n'
+            + 'ORG:W5-BOT CoOwner;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=919048422384:+919048422384\n'
+            + 'END:VCARD'
+await message.client.sendMessage(message.jid, {displayname: "AK", vcard: w5}, MessageType.contact);
+ 
+  }));
+    
+ Asena.addCommand({pattern: 'coowner', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
+   const w5 = 'BEGIN:VCARD\n'
+            + 'VERSION:3.0\n' 
+            + 'FN:HARI\n'
+            + 'ORG:W5-BOT CoOwner;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=918590335975:+918590335975\n'
+            + 'END:VCARD'
+await message.client.sendMessage(message.jid, {displayname: "HARI", vcard: w5}, MessageType.contact);
+ 
+  }));   
+    
     Asena.addCommand({pattern: 'psysd', fromMe: true, desc: Lang.SYSD_DESC, dontAddCommandList: true }, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
