@@ -74,6 +74,9 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t41 = ''
     var t42 = ''
     var t43 = ''
+    var t44 = ''
+    var t45 = ''
+    var t46 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -117,6 +120,9 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t41 = 'Create a glitch text effect online free.'
         t42 = 'Write text on foggy window online free.'
         t43 = 'Pornhub Style Logo Online Generator Free.'
+        t44 = 'Create Thunder Text Effect Online'
+        t45 = 'Dropwater Text Effect.'
+        t46 = 'Break Wall Text Effect.'
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -161,6 +167,9 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t41 = 'Create a glitch text effect online free.'
         t42 = 'Write text on foggy window online free.'
         t43 = 'Pornhub Style Logo Online Generator Free.'
+        t44 = 'Create Thunder Text Effect Online'
+        t45 = 'Dropwater Text Effect.'
+        t46 = 'Break Wall Text Effect.'
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -213,7 +222,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.text2glitch``` \n' + desc_cmd + t40 + '_\n' + usage_cmd + '.text2glitch Demigod_\n\n' +
         command_cmd + '```.text3glitch``` \n' + desc_cmd + t41 + '_\n' + usage_cmd + '.text3glitch Demigod;Hari_\n\n' +
         command_cmd + '```.textfoggy``` \n' + desc_cmd + t42 + '_\n' + usage_cmd + '.textfoggy Demigod_\n\n' +
-        command_cmd + '```.textpornhub``` \n' + desc_cmd + t43 + '_\n' + usage_cmd + '.textpornhub Demigod;Hari_\n\n' +  
+        command_cmd + '```.textpornhub``` \n' + desc_cmd + t43 + '_\n' + usage_cmd + '.textpornhub Demigod;Hari_\n\n' +
+        command_cmd + '```.text2thunder``` \n' + desc_cmd + t44 + '_\n' + usage_cmd + '.text2thunder Demigod_\n\n' +  
+        command_cmd + '```.textdropwater``` \n' + desc_cmd + t45 + '_\n' + usage_cmd + '.textdropwater Demigod_\n\n' +
+        command_cmd + '```.textbreakwall``` \n' + desc_cmd + t46 + '_\n' + usage_cmd + '.textbreakwall Demigod_\n\n' +
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Demigod;Ak_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
@@ -1155,6 +1167,63 @@ Asena.addCommand({pattern: 'textfoggy ?(.*)', fromMe: wk, dontAddCommandList: tr
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/foggy.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/foggy.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text2thunder ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-thunder-text-effect-online-881.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/2thunder.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/2thunder.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textdropwater ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/dropwater-text-effect-872.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/dpwtr.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/dpwtr.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textbreakwall ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/break-wall-text-effect-871.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/bkwall.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bkwall.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
               })
           } catch(err) { 
               console.log(err)
