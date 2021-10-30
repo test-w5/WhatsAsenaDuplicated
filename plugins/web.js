@@ -10,6 +10,7 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const speedTest = require('@lh2020/speedtest-net');
 const TinyURL = require('tinyurl');
+const imgurUploader = require('imgur-uploader');
 const Config = require('../config');
 
 const Language = require('../language');
@@ -458,6 +459,21 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
+  Asena.addCommand({pattern: 'img2url ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+        if (
+      !message.reply_message ||
+      (!message.reply_message.image && !message.reply_message.video)
+    )
+      return await message.sendMessage(Lang.URL_NEED_REPLY);
+    if (message.reply_message.length > 10)
+      return await message.sendMessage("*Only accept below 10 MB*");
+    let location = await message.reply_message.downloadAndSaveMediaMessage(
+      "url"
+    );
+    let url = await imgurUploader(location);
+    return await message.sendMessage(url, { quoted: message.data });
+  }
+);
     Asena.addCommand({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
