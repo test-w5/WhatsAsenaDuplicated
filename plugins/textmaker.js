@@ -70,6 +70,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t37 = ''
     var t38 = ''
     var t39 = ''
+    var t40 = ''
+    var t41 = ''
+    var t42 = ''
+    var t43 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -109,6 +113,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t37 = 'Create green horror style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
         t38 = 'Online thunder text effect generator.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
         t39 = 'Create a magma hot text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t40 = 'Create impressive glitch text effects online.'
+        t41 = 'Create a glitch text effect online free.'
+        t42 = 'Write text on foggy window online free.'
+        t43 = 'Pornhub Style Logo Online Generator Free.'
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -149,6 +157,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t37 = 'Create green horror style text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
         t38 = 'Online thunder text effect generator.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
         t39 = 'Create a magma hot text effect online.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
+        t40 = 'Create impressive glitch text effects online.'
+        t41 = 'Create a glitch text effect online free.'
+        t42 = 'Write text on foggy window online free.'
+        t43 = 'Pornhub Style Logo Online Generator Free.'
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -197,7 +209,11 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.texttransformer``` \n' + desc_cmd + t36 + '_\n' + usage_cmd + '.texttransformer Demigod_\n\n' +
         command_cmd + '```.textdemon``` \n' + desc_cmd + t37 + '_\n' + usage_cmd + '.textdemon Demigod_\n\n' +
         command_cmd + '```.textthunder``` \n' + desc_cmd + t38 + '_\n' + usage_cmd + '.textthunder Demigod_\n\n' +
-        command_cmd + '```.textmagma``` \n' + desc_cmd + t39 + '_\n' + usage_cmd + '.textmagma Demigod_\n\n' +  
+        command_cmd + '```.textmagma``` \n' + desc_cmd + t39 + '_\n' + usage_cmd + '.textmagma Demigod_\n\n' +
+        command_cmd + '```.text2glitch``` \n' + desc_cmd + t40 + '_\n' + usage_cmd + '.text2glitch Demigod_\n\n' +
+        command_cmd + '```.text3glitch``` \n' + desc_cmd + t41 + '_\n' + usage_cmd + '.text3glitch Demigod;Hari_\n\n' +
+        command_cmd + '```.textfoggy``` \n' + desc_cmd + t42 + '_\n' + usage_cmd + '.textfoggy Demigod_\n\n' +
+        command_cmd + '```.textpornhub``` \n' + desc_cmd + t43 + '_\n' + usage_cmd + '.textpornhub Demigod;Hari_\n\n' +  
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Demigod;Ak_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
@@ -1045,6 +1061,100 @@ Asena.addCommand({pattern: 'textgameover ?(.*)', fromMe: wk, dontAddCommandList:
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/gameover.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/gameover.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text3glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    w5botapi.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/3glitch.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/3glitch.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textpornhub ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    w5botapi.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/pornhub.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/pornhub.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text2glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/2glitch.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/2glitch.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textfoggy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    w5botapi.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/foggy.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/foggy.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
               })
           } catch(err) { 
               console.log(err)
