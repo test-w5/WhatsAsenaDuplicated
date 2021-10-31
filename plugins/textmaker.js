@@ -1165,8 +1165,8 @@ Asena.addCommand({pattern: 'textfoggy ?(.*)', fromMe: wk, dontAddCommandList: tr
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/foggy.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/foggy.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/fggy.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/fggy.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
               })
           } catch(err) { 
               console.log(err)
