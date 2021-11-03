@@ -1156,23 +1156,9 @@ Asena.addCommand({pattern: 'text2glitch ?(.*)', fromMe: wk, dontAddCommandList: 
     });
 }));
 Asena.addCommand({pattern: 'textfoggy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/fggy.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/fggy.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/handwritten-text-on-foggy-glass-online-680.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'text2thunder ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     w5botapi.textpro("https://textpro.me/create-thunder-text-effect-online-881.html",
