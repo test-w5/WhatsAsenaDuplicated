@@ -78,6 +78,20 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t44 = ''
     var t45 = ''
     var t46 = ''
+    var t47 = ''
+    var t48 = ''
+    var t49 = ''
+    var t50 = ''
+    var t51 = ''
+    var t52 = ''
+    var t53 = ''
+    var t54 = ''
+    var t55 = ''
+    var t56 = ''
+    var t57 = ''
+    var t58 = ''
+    var t59 = ''
+    var t60 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -124,6 +138,20 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t44 = 'Create Thunder Text Effect Online'
         t45 = 'Dropwater Text Effect.'
         t46 = 'Break Wall Text Effect.'
+        t47 = 'Create Sad Text Effect on wet glass.'
+        t48 = 'Create anonymous hacker avatars cyan neon.'
+        t49 = 'PUBG logo maker cute character online.'
+        t50 = 'Create Free Fire Avatar Online.'
+        t51 = 'Create cute girl gamer mascot logo online.'
+        t52 = 'Free gaming logo maker for FPS game team.'
+        t53 = 'Create YT Gold Button.'
+        t54 = 'Make HEN Logo.'
+        t55 = 'Free PUBG Logo Maker Online.'
+        t56 = 'Create Free Fire Facebook Cover Online.'
+        t57 = 'Create the cover game PlayerUnknowns Battlegrounds.'
+        t58 = 'Create Project Yasuo logo.'
+        t59 = 'Flame lettering effect.'
+        t60 = 'Angel wing effect.'
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -171,6 +199,20 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t44 = 'Create Thunder Text Effect Online'
         t45 = 'Dropwater Text Effect.'
         t46 = 'Break Wall Text Effect.'
+        t47 = 'Create Sad Text Effect on wet glass.'
+        t48 = 'Create anonymous hacker avatars cyan neon.'
+        t49 = 'PUBG logo maker cute character online.'
+        t50 = 'Create Free Fire Avatar Online.'
+        t51 = 'Create cute girl gamer mascot logo online.'
+        t52 = 'Free gaming logo maker for FPS game team.'
+        t53 = 'Create YT Gold Button.'
+        t54 = 'Make HEN Logo.'
+        t55 = 'Free PUBG Logo Maker Online.'
+        t56 = 'Create Free Fire Facebook Cover Online.'
+        t57 = 'Create the cover game PlayerUnknowns Battlegrounds.'
+        t58 = 'Create Project Yasuo logo.'
+        t59 = 'Flame lettering effect.'
+        t60 = 'Angel wing effect.'
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -227,6 +269,20 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.text2thunder``` \n' + desc_cmd + t44 + '_\n' + usage_cmd + '.text2thunder Demigod_\n\n' +  
         command_cmd + '```.textdropwater``` \n' + desc_cmd + t45 + '_\n' + usage_cmd + '.textdropwater Demigod_\n\n' +
         command_cmd + '```.textbreakwall``` \n' + desc_cmd + t46 + '_\n' + usage_cmd + '.textbreakwall Demigod_\n\n' +
+        command_cmd + '```.textsad``` \n' + desc_cmd + t47 + '_\n' + usage_cmd + '.textsad Demigod_\n\n' +
+        command_cmd + '```.textanonymous``` \n' + desc_cmd + t48 + '_\n' + usage_cmd + '.textanonymous Demigod_\n\n' +
+        command_cmd + '```.textpubg``` \n' + desc_cmd + t49 + '_\n' + usage_cmd + '.textpubg Demigod_\n\n' +
+        command_cmd + '```.textffavatar``` \n' + desc_cmd + t50 + '_\n' + usage_cmd + '.textffavatar Demigod_\n\n' +
+        command_cmd + '```.textgirllg``` \n' + desc_cmd + t51 + '_\n' + usage_cmd + '.textgirllg Demigod_\n\n' +
+        command_cmd + '```.textfpslogo``` \n' + desc_cmd + t52 + '_\n' + usage_cmd + '.textfpslogo Demigod_\n\n' +
+        command_cmd + '```.textytgold``` \n' + desc_cmd + t53 + '_\n' + usage_cmd + '.textytgold Demigod_\n\n' +
+        command_cmd + '```.texthenlogo``` \n' + desc_cmd + t54 + '_\n' + usage_cmd + '.texthenlogo Demigod_\n\n' +
+        command_cmd + '```.text2pubg``` \n' + desc_cmd + t55 + '_\n' + usage_cmd + '.text2pubg Demigod_\n\n' +
+        command_cmd + '```.textffcover``` \n' + desc_cmd + t56 + '_\n' + usage_cmd + '.textffcover Demigod_\n\n' +
+        command_cmd + '```.text3pubg``` \n' + desc_cmd + t57 + '_\n' + usage_cmd + '.text3pubg Demigod_\n\n' +
+        command_cmd + '```.textyasuo``` \n' + desc_cmd + t58 + '_\n' + usage_cmd + '.textyasuo Demigod_\n\n' +
+        command_cmd + '```.textflame``` \n' + desc_cmd + t59 + '_\n' + usage_cmd + '.textflame Demigod_\n\n' +
+        command_cmd + '```.textangelwing``` \n' + desc_cmd + t60 + '_\n' + usage_cmd + '.textangelwing Demigod_\n\n' +  
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Demigod;Ak_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
