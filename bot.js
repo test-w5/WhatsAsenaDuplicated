@@ -19,6 +19,7 @@ const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const W5 = require('w5-bot');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
