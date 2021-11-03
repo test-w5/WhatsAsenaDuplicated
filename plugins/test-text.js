@@ -1,4 +1,5 @@
-const w5botapi = require('w5-textmaker'); // Import NPM Package
+const w5botapi = require('w5-textmaker');// Import NPM Package
+const W5 = require('w5-bot');
 
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
@@ -25,116 +26,72 @@ if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 Asena.addCommand({pattern: 'textsad ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/write-text-on-wet-glass-online-589.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/sad.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/sad.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/write-text-on-wet-glass-online-589.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'textanonymous ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/create-anonymous-hacker-avatars-cyan-neon-677.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/anonymous.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/anonymous.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-anonymous-hacker-avatars-cyan-neon-677.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'textpubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/pubg-logo-maker-cute-character-online-617.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/pubg.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/pubg.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/pubg-logo-maker-cute-character-online-617.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'textffavatar ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/create-free-fire-avatar-online-572.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ffavatar.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ffavatar.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-free-fire-avatar-online-572.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'textgirllg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/create-cute-girl-gamer-mascot-logo-online-687.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/girllg.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/girllg.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-cute-girl-gamer-mascot-logo-online-687.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
 Asena.addCommand({pattern: 'textfpslogo ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    w5botapi.ephoto("https://en.ephoto360.com/free-gaming-logo-maker-for-fps-game-team-546.html",
-        `${match[1]}`
-        ).then(async (data) => { 
-          try { 
-              var download = async(uri, filename, callback) => {
-                  await request.head(uri, async(err, res, body) => {    
-                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-                  });
-              };
-
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/fpslogo.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/fpslogo.jpg'), MessageType.image, { caption: '_*🐱W5-BOT🤖*_' })
-              })
-          } catch(err) { 
-              console.log(err)
-          } 
-    });
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/free-gaming-logo-maker-for-fps-game-team-546.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'textytgold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-silver-button-gold-button-social-network-online-450.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'texthenlogo ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/make-team-logo-online-free-432.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'text2pubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/free-pubg-logo-maker-online-609.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'textffcover ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-free-fire-facebook-cover-online-567.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'text3pubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-the-cover-game-playerunknown-s-battlegrounds-401.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'textyasuo ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/create-project-yasuo-logo-384.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'textflame ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/flame-lettering-effect-372.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
+}));
+Asena.addCommand({pattern: 'textangelwing ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await W5.ephoto(match[1], 'https://en.ephoto360.com/angel-wing-effect-329.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { mimetype: Mimetype.png, caption: '_*Made by 🐱W5-BOT🤖*_' })
 }));
