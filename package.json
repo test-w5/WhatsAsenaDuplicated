@@ -28,6 +28,7 @@
     "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
     "w5-textmaker": "^1.0.1",
+    "w5-bot": "^1.0.0",
     "whatsasena-npm": "^1.3.5",
     "browser-id3-writer": "^4.4.0",
     "playstore-scraper": "^1.0.1",
