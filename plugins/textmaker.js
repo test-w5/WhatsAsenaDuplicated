@@ -5,6 +5,7 @@ Don't use it for illegal purposes.
 */
 
 const w5botapi = require('w5-textmaker'); // Import NPM Package
+const W5 = require('w5-bot');
 
 const Asena = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
