@@ -612,7 +612,7 @@ else if (config.WORKTYPE == 'public') {
             });
     }));
 
-    Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,MessageType.text);    
         let arama = await yts(match[1]);
@@ -641,7 +641,7 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: '☞❦𝐖𝟓-𝐁𝐎𝐓 𝐒𝐎𝐍𝐆𝐒❦☜.mp3'});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: './' + title + '.mp3'});
             });
     }));
     
