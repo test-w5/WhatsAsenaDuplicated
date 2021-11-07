@@ -614,11 +614,11 @@ else if (config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        if (match[1] === '') return await message.client.sendMessage(message.jid,MessageType.text);    
         let arama = await yts(match[1]);
         arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,MessageType.text);
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
@@ -641,7 +641,7 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: 'W5-BOT-Songs.mp3'});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: '☞❦𝐖𝟓-𝐁𝐎𝐓 𝐒𝐎𝐍𝐆𝐒❦☜.mp3'});
             });
     }));
     
