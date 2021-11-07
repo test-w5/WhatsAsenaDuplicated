@@ -31,7 +31,7 @@ Asena[_0x41c653(172)]({pattern: _0x41c653(170), fromMe: wk, dontAddCommandList: 
   await _0xbc8996[_0x4e4cc8(164)][_0x4e4cc8(174)](_0xbc8996[_0x4e4cc8(154)], _0xd1ed59, MessageType[_0x4e4cc8(166)]);
 });
 function _0x366a() {
-  const _0x57095e = ["34hVJocj", "150DrCdSd", "© W5-BOT", "jid", "public", "*Good Evening 🌥*", "1007167SHXBKV", "530064QZOXBM", "split", "Nice Bot✨️", "14110eUqoml", "6669170rnAFmA", "654684WUxpWj", "client", "*Good Night 🌙*", "buttonsMessage", "\n│         *⌚", "Asia/Kolkata", "@adiwajshing/baileys", "tm ?(.*)", "╭──────────────────╮\n    W5-BOT\n╭──────────────────╯\n│\n│ Hey User ", "addCommand", "../events", "sendMessage", "165544cKTsiB", "98335gTykPL", "id1", "../config", "*Good Mornig ⛅*", "180sHahIj"];
+  const _0x57095e = ["34hVJocj", "150DrCdSd", "© W5-BOT", "jid", "public", "*Good Evening 🌥*", "1007167SHXBKV", "530064QZOXBM", "split", "Nice Bot✨️", "14110eUqoml", "6669170rnAFmA", "654684WUxpWj", "client", "*Good Night 🌙*", "buttonsMessage", "\n│         *⌚", "Asia/Kolkata", "@adiwajshing/baileys", "menu ?(.*)", "╭──────────────────╮\n    W5-BOT\n╭──────────────────╯\n│\n│ Hey User ", "addCommand", "../events", "sendMessage", "165544cKTsiB", "98335gTykPL", "id1", "../config", "*Good Mornig ⛅*", "180sHahIj"];
   _0x366a = function () {
     return _0x57095e;
   };
