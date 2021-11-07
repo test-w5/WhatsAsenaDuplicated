@@ -608,43 +608,12 @@ else if (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
-            });
-    }));
-
-    Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: match[1].replace('mp3', ☞❦𝐖𝟓-𝐁𝐎𝐓 𝐒𝐎𝐍𝐆𝐒❦☜ + '.mp3', mimetype: 'mp4Audio',quoted: message.data});
+           
         });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
+    }
 
-                reply = await message.client.sendMessage(message.jid,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: './' + title + '.mp3'});
-            });
-    }));
-    
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
