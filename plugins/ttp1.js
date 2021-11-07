@@ -6,6 +6,7 @@ const Config = require('../config');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
+let wk = Config.WORKTYPE == 'public' ? false : true
 const WhatsAsenaStack = require('whatsasena-npm')
 const W5 = require('w5-bot')
 const request = require('request');
