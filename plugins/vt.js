@@ -1,4 +1,4 @@
-const Trex = require('../events');
+const Asena = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -8,7 +8,7 @@ const cwebp = require('cwebp-bin');
 const Config = require('../config');
 const need ="*A word is needed..!*"
              
- Trex.addCommand({pattern: 'vote ?(.*)', fromMe: false, dontAdCommandList: true}, (async (message, match) => {
+ Asena.addCommand({pattern: 'vote ?(.*)', fromMe: false, dontAdCommandList: true}, (async (message, match) => {
       if (match[1] === '') return await message.client.sendMessage(message.jid,need);
       var topText, bottomText, tl, t2, t3 ;
       if (match[1].includes('/')) {
@@ -37,7 +37,7 @@ const button = {
  listType: 1
 }
 
-await message.client.sendMessage(message.jid, button, MessageType.listMessage);
+await message.client.sendMessage(message.jid, buttonMessage, MessageType.buttonsMessage));
   
   
       //var sewimage = await axios.get(`https://pencarikode.xyz/api/textpro/stone-text?text=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
