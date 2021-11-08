@@ -609,7 +609,7 @@ else if (config.WORKTYPE == 'public') {
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {quoted: message.data , mimetype: Mimetype.mp4Audio, ptt: false});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: 'match[1].mp3', mimetype: 'mp4Audio',quoted: message.data});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: '☞❦𝐖𝟓-𝐁𝐎𝐓 𝐒𝐎𝐍𝐆𝐒❦☜.mp3', mimetype: 'mp4Audio',quoted: message.data});
            
         });
     }
