@@ -5,11 +5,10 @@ const axios = require('axios');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
-let wk = Config.WORKTYPE == 'public' ? false : true
 const Config = require('../config');
 const need ="*A word is needed..!*"
              
- Trex.addCommand({pattern: 'vote ?(.*)', fromMe: wk, dontAdCommandList: true}, (async (message, match) => {
+ Trex.addCommand({pattern: 'vote ?(.*)', fromMe: false, dontAdCommandList: true}, (async (message, match) => {
       if (match[1] === '') return await message.client.sendMessage(message.jid,need);
       var topText, bottomText, tl, t2, t3 ;
       if (match[1].includes('/')) {
