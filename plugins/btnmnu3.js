@@ -19,4 +19,5 @@ const buttonMessage = {
     headerType: 1
 }
 
-await message.client.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+await message.client.sendMessage(id, buttonMessage, MessageType.buttonsMessage));
+}));
