@@ -37,7 +37,7 @@ const button = {
  listType: 1
 }
 
-await message.client.sendMessage(message.jid, button, MessageType.buttonsMessage));
+await message.client.sendMessage(message.jid, button, MessageType.buttonsMessage);
   
   
       //var sewimage = await axios.get(`https://pencarikode.xyz/api/textpro/stone-text?text=${topText}&text2=${bottomText}`, { responseType: 'arraybuffer' })
