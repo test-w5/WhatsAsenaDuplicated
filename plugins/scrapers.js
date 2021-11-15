@@ -691,7 +691,7 @@ else if (config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid,mesaj,MessageType.text, {quoted: message.data});
         await reply.delete();
     }));
-    Asena.addCommand({pattern: 'ytdetails ?(.*)', fromMe: false,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+    Asena.addCommand({pattern: 'detailyt ?(.*)', fromMe: false,  deleteCommand: false, desc: Lang.YT_DESC}, (async (message, match) => { 
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
     var searching = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text, {quoted: message.data});
