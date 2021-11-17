@@ -7,7 +7,7 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
-const WhatsAsenaStack = require('whatsasena-npm');
+const W5 = require('w5-bot');
 const exec = require('child_process').exec;
 
 let wk = Config.WORKTYPE == 'public' ? false : true
@@ -25,11 +25,11 @@ if (Config.LANG == 'ID') description = 'Mengonversi satuan berat.', bit = 'Mengo
 
 Asena.addCommand({pattern: 'unit ?(.*)', fromMe: wk, desc: description, usage: 'unit 1 kg mg // unit <number> <unit1> <unit2>'}, (async (message, match) => {
   var splitted_text = match[1].split(' ')
-  var auth_messages = await WhatsAsenaStack.unit_message(Config.LANG)
+  var auth_messages = await W5.unit_message(Config.LANG)
   if (splitted_text.length < 3) {
     return await message.client.sendMessage(message.jid,auth_messages.unsuccess + auth_messages.values, MessageType.text)
   }
-  var unitter = await WhatsAsenaStack.unit(splitted_text[0], splitted_text[1], splitted_text[2])
+  var unitter = await W5.unit(splitted_text[0], splitted_text[1], splitted_text[2])
   if (unitter.error) {
     return await message.client.sendMessage(message.jid,auth_messages.unsuccess + auth_messages.values, MessageType.text)
   }
@@ -39,11 +39,11 @@ Asena.addCommand({pattern: 'unit ?(.*)', fromMe: wk, desc: description, usage: '
 }));
 Asena.addCommand({pattern: 'bitunit ?(.*)', fromMe: wk, desc: bit, usage: 'bitunit 1 gb mb // bitunit <number> <unit1> <unit2>'}, (async (message, match) => {
   var splitted_text = match[1].split(' ')
-  var auth_messages = await WhatsAsenaStack.unit_byte_msg(Config.LANG)
+  var auth_messages = await W5.unit_byte_msg(Config.LANG)
   if (splitted_text.length < 3) {
     return await message.client.sendMessage(message.jid,auth_messages.unsuccess + auth_messages.values, MessageType.text)
   }
-  var unitter = await WhatsAsenaStack.unit_byte(splitted_text[0], splitted_text[1], splitted_text[2])
+  var unitter = await W5.unit_byte(splitted_text[0], splitted_text[1], splitted_text[2])
   if (unitter.error) {
     return await message.client.sendMessage(message.jid,auth_messages.unsuccess + auth_messages.values, MessageType.text)
   }
