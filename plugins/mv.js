@@ -6,7 +6,7 @@ if (Config.WORKTYPE == 'private') {
 	
 Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
+	let url = `http://www.omdbapi.com/?apikey=9d2d808&t=${match[1]}&plot=full`
 	const response = await got(url);
 	const json = JSON.parse(response.body);
 	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
@@ -35,7 +35,7 @@ else if (Config.WORKTYPE == 'public') {
 	
 Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
 	if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
-	let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
+	let url = `http://www.omdbapi.com/?apikey=9d2d808&t=${match[1]}&plot=full`
 	const response = await got(url);
 	const json = JSON.parse(response.body);
 	if (json.Response != 'True') return await message.client.sendMessage(message.jid, '*Not found.*', MessageType.text, { quoted: message.data });
