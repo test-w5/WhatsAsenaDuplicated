@@ -30,6 +30,7 @@
     "w5-textmaker": "^1.0.2",
     "w5-bot": "^1.0.2",
     "w5-ytl": "^1.0.0",
+    "moment-timezone": "^0.5.34",
     "whatsasena-npm": "^1.3.5",
     "browser-id3-writer": "^4.4.0",
     "playstore-scraper": "^1.0.1",
