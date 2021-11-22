@@ -31,6 +31,7 @@ module.exports = {
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
     MUTEMSG: process.env.MUTE_MESSAGE === undefined ? 'default' : process.env.MUTE_MESSAGE,
     LOGO: process.env.LOGO === undefined ?'https://i.hizliresim.com/hn71uc7.jpg' : process.env.LOGO,
+    TIME_ZONE: process.env.TIME_ZONE === undefined ? 'Asia/Kolkata' : process.env.TIME_ZONE,
     NOLOG: process.env.NO_LOG === undefined ? 'false' : process.env.NO_LOG,
     BLOCKMSG: process.env.BLOCK_MESSAGE === undefined ? 'default' : process.env.BLOCK_MESSAGE,
     UNBLOCKMSG: process.env.UNBLOCK_MESSAGE === undefined ? 'default' : process.env.UNBLOCK_MESSAGE,
