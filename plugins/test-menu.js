@@ -31,24 +31,21 @@ if (hrs >= 12 && hrs <= 17) wish = '*GOOD AFTERNOON 🌞*'
 if (hrs >= 17 && hrs <= 19) wish = '*GOOD EVENING 🌥*'
 if (hrs >= 19 && hrs <= 24) wish = '*GOOD NIGHT 🌙*'
 
-if (config.FULLEVA == 'true') eva = 'On'
-if (config.FULLEVA == 'false') eva = 'Off'
-if (config.AUTOBİO == 'true') auto_bio = 'On'
-if (config.AUTOBİO == 'false') auto_bio = 'Off'
-
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, quoted: message.data, caption: `
-╭──────────────────╯
+╭──────────────────
 │
 │ Hey User ` + wish + `
-│         *⌚` + time + `*
+│         
+│   
+│    *⌚` + time + `*
 │
-┣𝕾⃝🐱 *DEVELOPER* : WH173 5P1D3R
-┣𝕾⃝🐱 *BOT* : 🐱W5-BOT🤖
-┣𝕾⃝🐱 *VERSION* : v1.5 Stable
-┣𝕾⃝🐱 *FULL EVA* : ` + eva + `
-┣𝕾⃝🐱 *AUTO BIO* : ` + auto_bio + `
-┣𝕾⃝🐱 *MODE* : PUBLIC
-┣𝕾⃝🐱 *PREFIX* : *.*
+│
+│ 
+┣🐱 *DEVELOPER* : WH173 5P1D3R
+┣🐱 *BOT* : 🐱W5-BOT🤖
+┣🐱 *VERSION* : v1.5 Stable
+┣🐱 *MODE* : PUBLIC
+┣🐱 *PREFIX* : *.*
 │
 │      ▎▍▌▌▉▏▎▌▉▐▏▌▎
 │      ▎▍▌▌▉▏▎▌▉▐▏▌▎
