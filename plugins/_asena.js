@@ -15,7 +15,7 @@ const Lang = Language.getString('_asena');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'a ?(.*)', fromMe: true, dontAddCommandList: false}, (async (message, match) => {
+    Asena.addCommand({pattern: 'amenu ?(.*)', fromMe: true, dontAddCommandList: false}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -123,7 +123,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'a ?(.*)', fromMe: false, dontAddCommandList: false}, (async (message, match) => {
+    Asena.addCommand({pattern: 'amenu ?(.*)', fromMe: false, dontAddCommandList: false}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
