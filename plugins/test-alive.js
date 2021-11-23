@@ -41,6 +41,4 @@ Asena.addCommand({pattern: 'testalive', fromMe: false, desc: Lang.ALIVE_DESC}, (
 │       ©917591973073
 │
 ╰──────────────────
-`}) 
-
-}));
+`}); });
