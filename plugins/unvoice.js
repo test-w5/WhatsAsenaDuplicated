@@ -80,7 +80,7 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    Asena.addCommand({pattern: 'unimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'unimage', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage("Tag an image");
     var downloading = await message.client.sendMessage(message.jid,"```Downloading & Uploading...```",MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
