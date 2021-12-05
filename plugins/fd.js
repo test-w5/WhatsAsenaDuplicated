@@ -12,7 +12,7 @@ const FIND_DESC = "Looking for the song."
 if (Config.WORKTYPE == 'private') {
 
 Asena.addCommand({pattern: 'whatthissong', fromMe: true, desc: FIND_DESC }, (async (message, match) => {
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*Reply to some mp3 audio to search.*', MessageType.text);
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*Reply to a Video/Audio.*', MessageType.text);
     var filePath = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
@@ -48,7 +48,7 @@ Asena.addCommand({pattern: 'whatthissong', fromMe: true, desc: FIND_DESC }, (asy
 else if (Config.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: 'whatthissong', fromMe: false, desc: FIND_DESC }, (async (message, match) => {
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*Reply to some mp3 audio to search.*', MessageType.text);
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid, '*Reply to a Video/Audio.*', MessageType.text);
     var filePath = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,
