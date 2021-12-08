@@ -7,10 +7,8 @@ const Alexa = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('W5-BOT');
 const ALang = Language.getString('scrapers');
-let tp1 = Config.WORKTYPE == 'public' ? false : true
-let tp2 = Config.WORKTYPE == 'public' ? true : false
 
-Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp1, desc: Lang.PINSTA}, async (message, match) => {
+Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: false, desc: Lang.PINSTA}, async (message, match) => {
 
     const link = match[1]
 
@@ -36,7 +34,7 @@ Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp1, desc: Lang.PINSTA}, async 
 					
 }) 
 
-Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp2, dontAddCommandList:true}, async (message, match) => {
+Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
@@ -62,7 +60,7 @@ Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp2, dontAddCommandList:true}, 
 					
 }) 
 
-Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: tp1, desc: Lang.VINSTA }, async (message, match) => {
+Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: false, desc: Lang.VINSTA }, async (message, match) => {
 
     const link = match[1]
 
@@ -87,7 +85,7 @@ Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: tp1, desc: Lang.VINSTA }, async
 					
 })
 
-Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: tp2, dontAddCommandList:true}, async (message, match) => {
+Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
