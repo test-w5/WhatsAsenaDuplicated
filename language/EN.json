@@ -12,7 +12,9 @@
             "WARN": "Warn"
         },
         "W5-BOT": {
-            "FANCY": "Text Styles"
+            "FANCY": "Text Styles",
+            "PINSTA": "Download Instergram post",
+            "VINSTA": "Download instergram video"
         },
         "_plugin": {
             "INSTALL_DESC": "Install external plugins.",
