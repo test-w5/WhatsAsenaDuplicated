@@ -7,9 +7,36 @@ const Alexa = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('W5-BOT');
 const ALang = Language.getString('scrapers');
-let wk = Config.WORKTYPE == 'public' ? false : true
+let tp1 = Config.WORKTYPE == 'public' ? false : true
+let tp2 = Config.WORKTYPE == 'public' ? true : false
 
-Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: wk, desc: Lang.PINSTA}, async (message, match) => {
+Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp1, desc: Lang.PINSTA}, async (message, match) => {
+
+    const link = match[1]
+
+    if (!link) return await message.sendMessage(" *Give Vaild Insta Link That Includes Photo* ")
+
+    await message.sendMessage('👻 *Insta Downloader* 🕊 \n'+ALang.DOWNLOADING_VIDEO)
+	
+			var url = `https://yuzzu-api.herokuapp.com/api/instagram?link=${link}`
+
+				await axios
+					.get(`${url}`)
+					.then(async(response) => {
+						const {link,} = response.data.result.result
+						
+
+						const linkdata = await axios.get(link, {responseType: 'arraybuffer'})
+
+						await message.sendMessage(Buffer.from(linkdata.data), MessageType.image, {caption: Alexa.BOT_NAME,})
+							.catch(
+								async(err) => await message.sendMessage("⛔️ *INVALID LINK OR NO PHOTO FOUND*"),
+							)
+					})
+					
+}) 
+
+Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: tp2, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
@@ -35,32 +62,7 @@ Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: wk, desc: Lang.PINSTA}, async (
 					
 }) 
 
-Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: wk, dontAddCommandList:true}, async (message, match) => {
-
-    const link = match[1]
-
-    if (!link) return await message.sendMessage(" *Give Vaild Insta Link That Includes Photo* ")
-
-    await message.sendMessage('👻 *Insta Downloader* 🕊 \n'+ALang.DOWNLOADING_VIDEO)
-	
-			var url = `https://yuzzu-api.herokuapp.com/api/instagram?link=${link}`
-
-				await axios
-					.get(`${url}`)
-					.then(async(response) => {
-						const {link,} = response.data.result.result
-						
-
-						const linkdata = await axios.get(link, {responseType: 'arraybuffer'})
-
-						await message.sendMessage(Buffer.from(linkdata.data), MessageType.image, {caption: Alexa.BOT_NAME,})
-							.catch(
-								async(err) => await message.sendMessage("⛔️ *INVALID LINK OR NO PHOTO FOUND*"),
-							)
-					})
-					
-}) 
-Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: wk, desc: Lang.VINSTA }, async (message, match) => {
+Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: tp1, desc: Lang.VINSTA }, async (message, match) => {
 
     const link = match[1]
 
@@ -83,8 +85,9 @@ Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: wk, desc: Lang.VINSTA }, async 
 							)
 					})
 					
-}) 
-Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: wk, dontAddCommandList:true}, async (message, match) => {
+})
+
+Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: tp2, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
 
@@ -107,4 +110,4 @@ Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: wk, dontAddCommandList:true}, a
 							)
 					})
 					
-}) 
+})
