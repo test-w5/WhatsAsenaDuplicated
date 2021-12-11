@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/test-w5/WhatsAsenaDuplicated#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "3.5.2",
+    "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
     "w5-textmaker": "^1.0.2",
     "w5-bot": "^1.0.2",
