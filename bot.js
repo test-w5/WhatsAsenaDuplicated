@@ -81,7 +81,7 @@ async function whatsAsena () {
     clh.pay = ddd
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [3, 3234, 9]
+    conn.version = [3,2147,14]
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
