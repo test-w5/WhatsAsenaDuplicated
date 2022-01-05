@@ -228,8 +228,8 @@ else if (Config.WORKTYPE == 'public') {
                 await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: '🐱𝐖𝟓-𝐁𝐎𝐓🤖.mp3'});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-    }));
+     }));
 
 }
-}
     
+}
