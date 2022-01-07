@@ -52,6 +52,5 @@ var todoc_desc = ''
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-}
     
 }
