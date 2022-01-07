@@ -192,44 +192,4 @@ else if (Config.WORKTYPE == 'public') {
             })
         })
     }));
-    var todoc_desc = ''
-    var w51 = ''
-    var w52 = ''
-     if (Config.LANG == 'EN') {
-        todoc_desc = 'covert video or voice to mp3 Document'
-        w51 = '```Converting to MP3 Document```'
-        w52 = '```Please reply to a video or voice```'
-        
-    }
-    if (Config.LANG == 'ML') {
-        todoc_desc = 'ഡോക്യുമെന്റിലേക്ക് പരിവർത്തനം ചെയ്യുകയും നൽകിയപേര് ചേർക്കുകയും ചെയ്യുക'
-        w51 = '```ഒരു ഓഡിയോയ്ക്ക് മറുപടി നൽകുക```'
-        w52 = '```ഡോക്യുമെന്റിലേക്ക് പരിവർത്തനം ചെയ്യുന്നു```'
-       
-    }
-    
-     Asena.addCommand({pattern: 'todoc ?(.*)', fromMe: false, desc: todoc_desc , usage : w52}, (async (message, match) => { 
-      
-          
-        const mid = message.jid
-        if (message.reply_message === false) return await message.client.sendMessage(mid,w52, MessageType.text);
-        var downloading = await message.client.sendMessage(mid,w51,MessageType.text);
-        var location = await message.client.downloadAndSaveMediaMessage({
-            key: {
-                remoteJid: message.reply_message.jid,
-                id: message.reply_message.id
-            },
-            message: message.reply_message.data.quotedMessage
-        });
-
-        ffmpeg(location)    
-            .save('output.mp3')
-            .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.document, {mimetype: Mimetype.mp4Audio, quoted: message.data, filename: '🐱𝐖𝟓-𝐁𝐎𝐓🤖.mp3'});
-            });
-        return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-     }));
-
-}
-    
 }
