@@ -53,4 +53,3 @@ var todoc_desc = ''
     }));
 
     
-}
