@@ -82,6 +82,7 @@ async function whatsAsena () {
     const conn = new WAConnection();
     const Session = new StringSession();
     conn.version = [3, 3234, 9]
+    conn.browserDescription = ["W5-BOT", "firefox", '1.0.0']
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
