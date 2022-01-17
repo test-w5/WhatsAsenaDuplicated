@@ -135,7 +135,7 @@ async function whatsAsena () {
             }
         })
     }, 50000);
-    var insult = await axios.get('https://gist.githubusercontent.com/WH173-5P1D3R/6f039823230ae963288ffcbbfa0c6f11/raw')
+    var insult = await axios.get('https://gist.github.com/WH173-5P1D3R/01e17243eb09df54bfa840847f3446d8/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
