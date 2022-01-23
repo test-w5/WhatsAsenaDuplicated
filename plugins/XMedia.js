@@ -1102,6 +1102,26 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
+    
+    Asena.addCommand({pattern: 'mp3bass', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
+        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
+        var location = await message.client.downloadAndSaveMediaMessage({
+            key: {
+                remoteJid: message.reply_message.jid,
+                id: message.reply_message.id
+            },
+            message: message.reply_message.data.quotedMessage
+        });
+
+        ffmpeg(location)
+            .outputOptions(["-y", "-filter:a", "bass=g=9:f=110:w=0.6"])
+            .save('output.mp3')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+    }));
 
     Asena.addCommand({pattern: 'x2mp4', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
