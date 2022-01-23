@@ -42,7 +42,7 @@
     "cwebp": "^2.0.5",
     "search-engine-client": "^1.2.6",
     "deepai": "^1.0.17",
-    "cwebp-bin": "^6.1.1",
+    "cwebp-bin": "^7.0.1",
     "tinyurl": "^1.1.7",
     "imgur-uploader": "^4.2.1",
     "dotenv": "^8.2.0",
