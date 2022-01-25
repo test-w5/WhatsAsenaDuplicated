@@ -3,7 +3,7 @@ const Language = require("../language")
 const Lang = Language.getString("weather")
 const yts = require("yt-search")
 const moment = require("moment")
-const { yta, ytv, igdl, upload, formatDate } = require("./lib/ytdl")
+const { yta, ytv, igdl, upload, formatDate } = require("./lib/dl")
 const { Mimetype, MessageType } = require("@adiwajshing/baileys")
 
 const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
