@@ -28,6 +28,7 @@
     "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
     "w5-textmaker": "^1.0.2",
+    "cfonts": "^2.9.0",
     "w5-bot": "^1.0.2",
     "w5-ytl": "^1.0.0",
     "moment-timezone": "^0.5.34",
