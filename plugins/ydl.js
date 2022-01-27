@@ -1,4 +1,4 @@
-/*const Asena = require('../events');
+/*/const Asena = require('../events');
 const Language = require("../language")
 const Lang = Language.getString("weather")
 const yts = require("yt-search")
@@ -89,4 +89,4 @@ Asena.addCommand(
         MessageType.audio
       )
   }
-)/*
+)/*/
