@@ -22,7 +22,7 @@ const Lang = Language.getString('instagram')
 const Tlang = Language.getString('tiktok')
 
 if (cn.WORKTYPE == 'private') {
-
+    /*
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: "Download content from insta link"}, async (message, match) => {
 
     const userName = match[1]
@@ -58,6 +58,7 @@ if (cn.WORKTYPE == 'private') {
       )
   },
 )
+*/
 Asena.addCommand({ pattern: 'twt ?(.*)', fromMe: false, desc: "download from twitter links" }, async (message, match) => {
 
     const userName = match[1]
@@ -126,7 +127,7 @@ Asena.addCommand({ pattern: 'twt ?(.*)', fromMe: false, desc: "download from twi
     */
 }
 else if (cn.WORKTYPE == 'public') {
-
+    /*
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: "Download content from insta link"}, async (message, match) => {
 
     const userName = match[1]
@@ -162,6 +163,7 @@ else if (cn.WORKTYPE == 'public') {
       )
   },
 )
+
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC, dontAddCommandList: true }, (async (message, match) => {
         if (match[0].includes('install')) return;
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
@@ -186,6 +188,7 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
+    */
     /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
