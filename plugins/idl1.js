@@ -6,6 +6,7 @@ const Language = require('../language');
 const Lang = Language.getString('W5-BOT');
 const ALang = Language.getString('scrapers');
 
+/*
 Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: false, desc: Lang.PINSTA}, async (message, match) => {
 
     const link = match[1]
@@ -57,6 +58,7 @@ Asena.addCommand({ pattern: 'igp ?(.*)', fromMe: true, dontAddCommandList:true},
 					})
 					
 }) 
+*/
 
 Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.VINSTA }, async (message, match) => {
 
@@ -84,6 +86,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.VINSTA }, a
 					
 })
 
+/*
 Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
 
     const link = match[1]
@@ -108,3 +111,4 @@ Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: false, dontAddCommandList:true}
 					})
 					
 })
+*/
