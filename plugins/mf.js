@@ -29,10 +29,10 @@ Asena.addCommand({pattern: 'mediafire', fromMe: wk, desc: MMM}, (async (message,
               download,
             } = response.data
     
-            const teenux = await axios.get(download, {responseType: 'arraybuffer'})
+            const abdu = await axios.get(download, {responseType: 'arraybuffer'})
     
             await message.client.sendMessage(message.jid,M_UP,MessageType.text);
-            await message.client.sendMessage(message.jid,Buffer.from(teenux.data), MessageType.document, {mimetype: Mimetype.pdf, ptt: false})
+            await message.client.sendMessage(message.jid,Buffer.from(abdu.data), MessageType.document, {mimetype: Mimetype.pdf, ptt: false})
         })
         .catch(
           async (err) => await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text, {quoted: message.data}),
@@ -54,10 +54,10 @@ Asena.addCommand({ pattern: 'afire ?(.*)', fromMe: wk, dontAddCommandList:true, 
               download,
             } = response.data
     
-            const teenux = await axios.get(download, {responseType: 'arraybuffer'})
+            const abdu = await axios.get(download, {responseType: 'arraybuffer'})
     
             await message.client.sendMessage(message.jid,M_UP,MessageType.text);
-            await message.client.sendMessage(message.jid,Buffer.from(teenux.data), MessageType.document, {mimetype: 'application/octet-stream', quoted: message.data})
+            await message.client.sendMessage(message.jid,Buffer.from(abdu.data), MessageType.document, {mimetype: 'application/octet-stream', quoted: message.data})
         })
         .catch(
           async (err) => await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text, {quoted: message.data}),
