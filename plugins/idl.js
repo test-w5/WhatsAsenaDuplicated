@@ -8,7 +8,6 @@ Asena.addCommand(
   {
     pattern: "ins ?(.*)",
     fromMe: false,
-    desc: Lang.INSTA_DESC,
   },
   async (message, match) => {
     match = match || message.reply_message.text
