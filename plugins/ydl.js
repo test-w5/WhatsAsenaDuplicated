@@ -16,7 +16,7 @@ const {
   info,
   success,
   close,
-} = require("./lib/functions")
+} = require("../lib/functions")
 const { Mimetype, MessageType } = require("@adiwajshing/baileys")
 
 const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
