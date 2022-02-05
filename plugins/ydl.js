@@ -4,6 +4,7 @@ const Lang = Language.getString("weather")
 const yts = require("yt-search")
 const moment = require("moment")
 const { yta, ytv, igdl, upload, formatDate } = require("../lib/dl")
+const { getBuffer, getRandom, success, close, start } = require("../lib/functions")
 const {
   getBuffer,
   h2k,
