@@ -26,7 +26,6 @@ Asena.addCommand(
   {
     pattern: "ytv ?(.*)",
     fromMe: false,
-    desc: Lang.YTV_DESC,
   },
   async (message, match) => {
     match = match || message.reply_message.text
