@@ -1,9 +1,9 @@
-const Asena = require('../events')
-const { MessageType, Mimetype } = require("@adiwajshing/baileys")
-const { getBuffer, getRandom, success, close, start } = require("../lib/functions")
-const { yta, ytv, igdl, upload, formatDate } = require("../lib/dl")
-const Language = require("../language")
-const Lang = Language.getString("insta")
+const Asena = require('../events');
+const { MessageType, Mimetype } = require("@adiwajshing/baileys");
+const { getBuffer, getRandom, success, close, start } = require('../fun');
+const { yta, ytv, igdl, upload, formatDate } = require('../don');
+const Language = require("../language");
+const Lang = Language.getString("insta");
 Asena.addCommand(
   {
     pattern: "ins ?(.*)",
