@@ -78,7 +78,6 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.VINSTA }, a
 						const linkdata = await axios.get(link, {responseType: 'arraybuffer'})
 
 						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {caption: '_*🐱W5-BOT🤖*_', quoted: message.data, })
-                                                await message.sendMessage(Buffer.from(linkdata.data), MessageType.image, {caption: '_*🐱W5-BOT🤖*_', quoted: message.data, })
 							.catch(
 								async(err) => await message.sendMessage("⛔️ *INVALID LINK*"),
 							)
