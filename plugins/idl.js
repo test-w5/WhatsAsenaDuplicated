@@ -1,7 +1,9 @@
 /*const Asena = require('../events');
 const { MessageType, Mimetype } = require("@adiwajshing/baileys");
-const { getBuffer, getRandom, success, close, start } = require('../fun');
-const { yta, ytv, igdl, upload, formatDate } = require('../don');
+//const { getBuffer, getRandom, success, close, start } = require('../fun');
+//const { yta, ytv, igdl, upload, formatDate } = require('../don');
+const { getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, banner, close } = require('./sql/buff');
+const { yta, ytv, igdl, upload, formatDate } = require('./sql/down');
 const Language = require("../language");
 const Lang = Language.getString("insta");
 Asena.addCommand(
