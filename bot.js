@@ -16,6 +16,7 @@ const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 //const { getBuffer, getRandom, success, close, start } = require('../fun');
+const { getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, banner, close } = require("./plugins/sql/buff");
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
