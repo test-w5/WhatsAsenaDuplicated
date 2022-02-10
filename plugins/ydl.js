@@ -52,7 +52,7 @@ Asena.addCommand(
 
 Asena.addCommand(
   {
-    pattern: "yta ?(.*)",
+    pattern: "tyta ?(.*)",
     fromMe: false,
     desc: "Yt video to mp3",
   },
