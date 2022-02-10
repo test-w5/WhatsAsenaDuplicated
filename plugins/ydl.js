@@ -1,4 +1,4 @@
-/*const Asena = require('../events');
+const Asena = require('../events');
 const Language = require("../language");
 const Lang = Language.getString("weather");
 const yts = require("yt-search");
@@ -15,7 +15,7 @@ const ytIdRegex = /(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\
 
 Asena.addCommand(
   {
-    pattern: "ytv ?(.*)",
+    pattern: "tytv ?(.*)",
     fromMe: false,
   },
   async (message, match) => {
@@ -81,4 +81,4 @@ Asena.addCommand(
       )
   }
 )
-*/
+
