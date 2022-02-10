@@ -1,4 +1,4 @@
-/*const Asena = require('../events');
+const Asena = require('../events');
 const { MessageType, Mimetype } = require("@adiwajshing/baileys");
 //const { getBuffer, getRandom, success, close, start } = require('../fun');
 //const { yta, ytv, igdl, upload, formatDate } = require('../don');
@@ -36,4 +36,4 @@ Asena.addCommand(
     })
   }
 )
-*/
+
