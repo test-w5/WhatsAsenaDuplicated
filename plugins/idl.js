@@ -8,7 +8,7 @@ const Language = require("../language");
 const Lang = Language.getString("insta");
 Asena.addCommand(
   {
-    pattern: "ins ?(.*)",
+    pattern: "tins ?(.*)",
     fromMe: false,
   },
   async (message, match) => {
