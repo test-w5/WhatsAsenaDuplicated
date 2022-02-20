@@ -53,6 +53,9 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         if (!!message.mention && message.mention[0] == '917736807522@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./mp3/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})
         }
+        if (!!message.mention && message.mention[0] == '917994876705@s.whatsapp.net') {
+await message.client.sendMessage(message.jid, fs.readFileSync('./mp3/mention.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted : message.data, ptt: true})
+        }
 const array = ['Abdu','Bot','Friend','Friends','Hello','help','menu','Demigod','Myr','Myre','thyr','thyre','Nanba','Nanban','Lub u','Anu','Sorry','Jinson','Hari','I love you','Good night','Good morning','Nandhu','Good afternoon','AK','DEMIGOD','Demigod','Akash','I love u']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
@@ -74,6 +77,9 @@ if(pattern.test(message.message)){
 }));
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         if (!!message.mention && message.mention[0] == '917736807522@s.whatsapp.net') {
+await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
+    }
+        if (!!message.mention && message.mention[0] == '917994876705@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./Webp/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
     }
 const array = ['Abdu','Demigod','Bot']
