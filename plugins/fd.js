@@ -58,7 +58,7 @@ else if (Config.WORKTYPE == 'public') {
     });
     var form = new FormData();
     ffmpeg(filePath).format('mp3').save('music.mp3').on('end', async () => {
-        form.append('api_token', '128f40c73de753976d42a9fa8ec1e730');
+        form.append('api_token', '810981ae4ec82e95f009061df3c82eea');
         form.append('file', fs.createReadStream('./music.mp3'));
         form.append('return', 'apple_music, spotify');
         var configs = {
