@@ -12,12 +12,12 @@ const got = require("got");
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 
-Asena.addCommand({pattern: 'ig ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
+Asena.addCommand({pattern: 'tsig ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
   try{
     if (!match[1]) return await message.sendMessage("Enter a link");
     await message.sendMessage("Searching...")
 
-    res = await w5botapi.igDownloader(match[1])
+    res = await igDownloader(match[1])
     ytm = res.result
     const profileBuffer = await axios.get(`${ytm.link}`, {responseType: 'arraybuffer'})
     const msg = `${ytm.link}`
