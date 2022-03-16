@@ -1,7 +1,8 @@
 const { MessageType, Mimetype } = require('@adiwajshing/baileys');
 const Asena = require('../events');
 const Config = require('../config');
-const w5botapi = require('w5-textmaker');
+const { igDownloader } = require("w5-textmaker");
+const w5-textmaker = require('w5-textmaker');
 const { errorMessage, infoMessage } = require('../hp');
 const axios = require('axios');
 const fs = require('fs');
@@ -11,12 +12,12 @@ const got = require("got");
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 
-Asena.addCommand({pattern: 'tsig ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
+Asena.addCommand({pattern: 'ig ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
   try{
     if (!match[1]) return await message.sendMessage("Enter a link");
     await message.sendMessage("Searching...")
 
-    res = await w5botapi.igDownloader(match[1])
+    res = await w5-textmaker.igDownloader(match[1])
     ytm = res.result
     const profileBuffer = await axios.get(`${ytm.link}`, {responseType: 'arraybuffer'})
     const msg = `${ytm.link}`
