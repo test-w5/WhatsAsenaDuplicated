@@ -11,7 +11,7 @@ const got = require("got");
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 
-Asena.addCommand({pattern: 'ig ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
+Asena.addCommand({pattern: 'pinterest ?(.*)', fromMe: wk, desc: "Download from Instagram"}, async (message, match) => {
   try{
     if (!match[1]) return await message.sendMessage("Enter a link");
     await message.sendMessage("Searching...")
