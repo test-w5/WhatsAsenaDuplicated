@@ -27,7 +27,7 @@
   "dependencies": {
     "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
-    "w5-textmaker": "^1.0.3",
+    "w5-textmaker": "^1.0.4",
     "cfonts": "^2.9.0",
     "crypto": "^1.0.1",
     "spinnies": "^0.5.1",
