@@ -18,8 +18,8 @@ Asena.addCommand({pattern: 'pinterest ?(.*)', fromMe: wk, desc: "Download from P
 
     res = await pinterest(match[1])
     ytm = res.result
-    const profileBuffer = await axios.get(`${ytm.link}`, {responseType: 'arraybuffer'})
-    const msg = `${ytm.link}`
+    const profileBuffer = await axios.get(`${ytm.querry}`, {responseType: 'arraybuffer'})
+    const msg = `${ytm.querry}`
      if (msg.includes('.mp4')) { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, { caption: "_*🐱W5-BOT🤖*_", quoted: message.data })}
      if (msg.includes('.jpg')) { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: "_*🐱W5-BOT🤖*_", quoted: message.data })}
   } catch {
