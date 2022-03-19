@@ -25,3 +25,4 @@ var stream = get.buffer();
 stream.then(async (video) => {
 await msg.client.sendMessage(msg.jid, video, type, { mimetype: mime,quoted: msg.data});
 })};
+}));
