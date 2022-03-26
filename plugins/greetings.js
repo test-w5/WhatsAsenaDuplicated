@@ -10,7 +10,6 @@ const sql = require('./sql/greetings');
 
 const Language = require('../language');
 const Lang = Language.getString('greetings');
-if (Config.WORKTYPE == 'private') {
 
 Asena.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
