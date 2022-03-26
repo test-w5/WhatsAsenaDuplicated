@@ -156,4 +156,3 @@ Asena.addCommand({pattern: 'goodbye (.*)', fromMe: false, dontAddCommandList: tr
     }
 }));
 }
-}
