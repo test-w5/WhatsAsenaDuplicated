@@ -263,6 +263,8 @@
             "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Bakü```",
             "LOCATION": "Location",
             "TEMP": "Temperature",
+            "NOT_FOUNDRQ": "*Invalid Request*",
+            "BOT_DESC": "Chat with W5-BOT (Dedicated to my Sis💞).\n Use .michu <message>",
             "DESC": "Description",
             "HUMI": "Humidity",
             "WIND": "Wind Speed",
