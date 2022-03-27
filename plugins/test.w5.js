@@ -5,7 +5,7 @@ const axios = require('axios');
 const config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('weather');
-Asena.addCommand({pattern: 'michu ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'michu ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NOT_FOUNDRQ);
 	const url = `https://api-sv2.simsimi.net/v2/?text=${match[1]}&lc=en&cf=true`;
 	try {
