@@ -58,6 +58,12 @@ else if (Config.WORKTYPE == 'public') {
         var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/glowingneon/?text=' + uri, { responseType: 'arraybuffer' })
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, quoted: message.data, caption: 'W5-BOT' })
     }));
+    Asena.addCommand({ pattern: 'emix ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
+        if(!match) return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
+        var uri = encodeURI(match)
+        var ttinullimage = await axios.get('https://early-pie-production.up.railway.app/emomix?q=' + uri, { responseType: 'arraybuffer' })
+        await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
+    }));
     Asena.addCommand({ pattern: '2attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
         var uri = encodeURI(match[1])
