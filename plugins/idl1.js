@@ -85,6 +85,57 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.VINSTA }, a
 					
 })
 
+Asena.addCommand({ pattern: 'story ?(.*)', fromMe: false, desc: Lang.VINSTA }, async (message, match) => {
+
+    const username = match[1]
+
+    if (!username) return await message.sendMessage(" *Give Vaild Insta Link That Includes Video* ")
+
+    await message.sendMessage('👻 *Insta Downloader* 🕊 \n'+ALang.DOWNLOADING_VIDEO)
+
+			var url = `https://hardianto.xyz/api/download/igstory?username=${username}&apikey=hardianto`
+
+				await axios
+					.get(`${url}`)
+					.then(async(response) => {
+						const {username,} = response.data.result.result
+
+						const linkdata = await axios.get(username, {responseType: 'arraybuffer'})
+
+						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {caption: '_*🐱W5-BOT🤖*_', quoted: message.data, })
+							.catch(
+								async(err) => await message.sendMessage("⛔️ *INVALID LINK*"),
+							)
+					})
+					
+})
+
+
+Asena.addCommand({ pattern: 'pstory ?(.*)', fromMe: false, desc: Lang.VINSTA }, async (message, match) => {
+
+    const username = match[1]
+
+    if (!username) return await message.sendMessage(" *Give Vaild Insta Link That Includes Video* ")
+
+    await message.sendMessage('👻 *Insta Downloader* 🕊 \n'+ALang.DOWNLOADING_VIDEO)
+
+			var url = `https://hardianto.xyz/api/download/igstory?username=${username}&apikey=hardianto`
+
+				await axios
+					.get(`${url}`)
+					.then(async(response) => {
+						const {username,} = response.data.result.result
+
+						const linkdata = await axios.get(username, {responseType: 'arraybuffer'})
+
+						await message.sendMessage(Buffer.from(linkdata.data), MessageType.image, {caption: '_*🐱W5-BOT🤖*_', quoted: message.data, })
+							.catch(
+								async(err) => await message.sendMessage("⛔️ *INVALID LINK*"),
+							)
+					})
+					
+})
+
 /*
 Asena.addCommand({ pattern: 'igv ?(.*)', fromMe: false, dontAddCommandList:true}, async (message, match) => {
 
