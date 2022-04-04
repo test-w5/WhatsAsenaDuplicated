@@ -1,4 +1,4 @@
-const { MessageType, Mimetype } = require('@adiwajshing/baileys');
+/*const { MessageType, Mimetype } = require('@adiwajshing/baileys');
 const Asena = require('../events');
 const Config = require('../config');
 const { igstory } = require('../igst.js')
@@ -28,3 +28,4 @@ Asena.addCommand({pattern: 'story ?(.*)', fromMe: wk, desc: "Download from Insta
      await message.sendMessage("error")
   }
 });
+*/
