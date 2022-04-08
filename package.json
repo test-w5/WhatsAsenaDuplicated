@@ -32,7 +32,6 @@
     "crypto": "^1.0.1",
     "spinnies": "^0.5.1",
     "w5-bot": "^1.0.2",
-    "raganork-bot": "1.9.1",
     "w5-ytl": "^1.0.0",
     "moment-timezone": "^0.5.34",
     "whatsasena-npm": "^1.3.5",
