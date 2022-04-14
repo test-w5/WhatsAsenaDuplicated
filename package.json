@@ -65,7 +65,7 @@
     "languagedetect": "^2.0.0",
     "meme-maker": "^2.1.2",
     "mongodb": "^4.0.1",
-    "node-fetch": "^3.2.3",
+    "node-fetch": "^2.6.1",
     "node-tesseract-ocr": "^2.2.1",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0",
