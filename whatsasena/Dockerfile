@@ -4,6 +4,6 @@ RUN git clone https://github.com/test-w5/WhatsAsenaDuplicated /root/WhatsAsenaDu
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
-RUN yarn install --no-audit
+RUN yarn install --audit
 
 CMD ["node", "bot.js"]
