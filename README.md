@@ -114,7 +114,7 @@ the user is responsible.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/test-w5/WhatsAsenaDuplicated)
 
-[![Deploy](https://gist.github.com/w5-bot-2/428b93a57dbe641d84745360fd301eb5)]
+                   [OR]
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://gist.github.com/w5-bot-2/428b93a57dbe641d84745360fd301eb5)
 
